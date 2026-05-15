@@ -2,10 +2,10 @@ This repository documents an integrated pipeline for building and refining an ex
 
 The repository structure roughly follows the steps of the pipeline (see figure below):
 
-1. **Initial query** using [HistText](https://bookdown.enpchina.eu/HistText_Book/)
-2. **Query expansion** using enp-china embeddings
-3. **Optical Character Recognition (OCR) quality** assessment using [Impresso pipelines](https://github.com/impresso/impresso-pipelines)
-4. **Relevance classification** using LLMs, with two options: OpenAI API or Ollama (local)
+1. **Initial query** using [HistText](https://bookdown.enpchina.eu/HistText_Book/);
+2. **Query expansion** using enp-china embeddings;
+3. **Optical Character Recognition (OCR) quality** assessment using [Impresso pipelines](https://github.com/impresso/impresso-pipelines);
+4. **Relevance classification** using LLMs, with two options: OpenAI API or Ollama (local);
 5. **Article segmentation** using LLMs, with three options: OpenAI API, Codex, or Ollama (local).
 
 
