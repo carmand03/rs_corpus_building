@@ -10,3 +10,4 @@ The repository structure roughly follows the steps of the pipeline (see figure b
 
 
 ![img](./newspaper_corpus_pipeline_mindmap.svg)
+*Made with Claude Sonnet 4.6*
