@@ -7,3 +7,7 @@ The repository structure follows the steps of the pipeline (see linked SVG):
 3. **Optical Character Recognition (OCR) quality** assessment using [Impresso pipelines](https://github.com/impresso/impresso-pipelines)
 4. **Relevance classification** using LLMs, with two options: OpenAI API or Ollama (local)
 5. **Article segmentation** using LLMs, with three options: OpenAI API, Codex, or Ollama (local).
+
+Pipeline 
+
+![img](./newspaper_corpus_pipeline_mindmap.svg)
