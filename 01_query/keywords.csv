@@ -1,0 +1,28 @@
+﻿term;language;granularity
+returned student;English;medium
+overseas student;English;medium
+Western returned;English;medium
+US returned;English;narrow
+American returned;English;narrow
+returnee;English;broad
+foreign educated;English;medium
+Western educated;English;medium
+US educated;English;narrow
+American educated;English;narrow
+foreign trained;English;medium
+Western trained;English;medium
+US trained;English;narrow
+American trained;English;narrow
+Boxer scholarship;English;narrow
+Boxer indemnity remission;English;narrow
+study abroad;English;medium
+student abroad;English;medium
+留美;Chinese;narrow
+留學;Chinese;medium
+游美;Chinese;medium
+回國;Chinese;broad
+歸國;Chinese;broad
+庚子賠款;Chinese;narrow
+庚子事變賠款;Chinese;narrow
+庚子拳亂賠款;Chinese;narrow
+庚款;Chinese;narrow
