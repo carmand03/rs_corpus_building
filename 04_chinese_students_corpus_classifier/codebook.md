@@ -1,4 +1,4 @@
-# Codebook v4: Chinese students educated in the United States newspaper corpus
+# Codebook: Chinese students educated in the United States newspaper corpus
 
 ## Research goal
 
