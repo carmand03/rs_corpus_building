@@ -112,7 +112,7 @@ python analyze_results.py \
   --review-confidence-threshold 0.80
 ```
 
-## v4 codebook update: actor-based HIGH relevance
+## Codebook update (v4): actor-based HIGH relevance
 
 Version 4 changes the HIGH/LESS boundary:
 
