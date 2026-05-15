@@ -1,4 +1,4 @@
-# Chinese students corpus classifier, v4
+# Chinese students corpus classifier
 
 This version revises the codebook so that the `LESS_RELEVANT_STUDY_ABROAD_GENERAL` category includes:
 
@@ -38,7 +38,6 @@ Install Ollama and pull a model, for example:
 ```bash
 ollama pull qwen2.5:14b
 python classify_corpus.py --provider ollama --model qwen2.5:14b --input proquest_exp_ft.csv --limit 100
-python classify_corpus_zh.py --provider ollama --model qwen2.5:14b --input shenbao_exp_ft.csv --limit 100
 ```
 
 ## Resume behavior
@@ -46,14 +45,13 @@ python classify_corpus_zh.py --provider ollama --model qwen2.5:14b --input shenb
 The script writes one completed article per line to:
 
 ```text
-classification_output_v2/results_openai.jsonl
+classification_output/results_openai.jsonl
 ```
 
 or:
 
 ```text
-classification_output_v2/results_ollama.jsonl
-classification_output_zh/results_ollama.jsonl
+classification_output/results_ollama.jsonl
 ```
 
 You may stop the run with `Ctrl-C`. When you rerun the same command, the script skips any `DocId` already present in the JSONL file.
@@ -61,14 +59,13 @@ You may stop the run with `Ctrl-C`. When you rerun the same command, the script 
 A merged CSV is periodically written to:
 
 ```text
-classification_output_v2/classified_openai.csv
+classification_output/classified_openai.csv
 ```
 
 or:
 
 ```text
-classification_output_v2/classified_ollama.csv
-classification_output_zh/classified_ollama.csv
+classification_output/classified_ollama.csv
 ```
 
 ## Statistical summaries and visualizations
@@ -77,7 +74,7 @@ After you have classification results, generate summary tables, plots, and a Mar
 
 ```bash
 python analyze_results.py \
-  --classified-csv classification_output_v2/classified_openai.csv \
+  --classified-csv classification_output_en/classified_openai.csv \
   --output-dir classification_analysis_openai
 ```
 
@@ -85,7 +82,7 @@ You can also analyze directly from the resumable JSONL file:
 
 ```bash
 python analyze_results.py \
-  --jsonl classification_output_v2/results_openai.jsonl \
+  --jsonl classification_output/results_openai.jsonl \
   --original-csv proquest_exp_ft.csv \
   --output-dir classification_analysis_openai
 ```
@@ -111,7 +108,7 @@ The human-review queue includes all articles flagged by the model with `needs_re
 
 ```bash
 python analyze_results.py \
-  --classified-csv classification_output_v2/classified_openai.csv \
+  --classified-csv classification_output/classified_openai.csv \
   --review-confidence-threshold 0.80
 ```
 
