@@ -1,13 +1,14 @@
 # Chinese students corpus classifier
 
-This version revises the codebook so that the `LESS_RELEVANT_STUDY_ABROAD_GENERAL` category includes:
+This folder contains a codebook and a resumable classifier for the uploaded `proquest_exp_ft.csv` file with columns: `DocId`, `Date`, `Title`, `Source`, `Text`.
 
-- returned-student organizations, such as the Euro-American Returned Students' Union;
-- foreign-educated Chinese professionals, including doctors and other professional disputes;
-- study-abroad loans, scholarships, indemnity funds, and educational missions;
-- Chinese study abroad in Britain, Europe, Japan, France, Germany, Russia, or unspecified foreign countries.
+## Recommended workflow
 
-The main correction is: do not mark an article irrelevant merely because it lacks a U.S. connection. If it concerns the broader Chinese study-abroad / returned-student ecosystem, classify it as LESS.
+1. Run a 100-article pilot.
+2. Manually review all low-confidence and a random sample of high-confidence labels.
+3. Revise the codebook if needed.
+4. Run the full 4,000+ article classification.
+5. Export uncertain cases for human adjudication.
 
 ## Setup on macOS
 
@@ -112,7 +113,16 @@ python analyze_results.py \
   --review-confidence-threshold 0.80
 ```
 
-## Codebook update (v4): actor-based HIGH relevance
+## Codebook update: actor-based HIGH relevance
+
+This version revises the codebook so that the `LESS_RELEVANT_STUDY_ABROAD_GENERAL` category includes:
+
+- returned-student organizations, such as the Euro-American Returned Students' Union;
+- foreign-educated Chinese professionals, including doctors and other professional disputes;
+- study-abroad loans, scholarships, indemnity funds, and educational missions;
+- Chinese study abroad in Britain, Europe, Japan, France, Germany, Russia, or unspecified foreign countries.
+
+The main correction is: do not mark an article irrelevant merely because it lacks a U.S. connection. If it concerns the broader Chinese study-abroad / returned-student ecosystem, classify it as LESS.
 
 Version 4 changes the HIGH/LESS boundary:
 
